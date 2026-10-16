@@ -168,9 +168,9 @@
                     <p class="text-sm font-semibold mr-4">ثبت آگهی</p>
                 </div>
             </div>
+
             <div>
                 <a href="#" class="font-semibold text-sm text-main rounded-2xl border border-main px-6 py-2">پاک کردن فرم</a>
-
             </div>
 
         </div>
@@ -201,15 +201,33 @@
 
     </header>
 
+    <!--section md> in input insert adverbes-->
+    <div class="items-center justify-between hidden lg:flex mt-4 max-w-screen px-4">
+            
+        <div>
+            <div class="flex items-center ">
+                <p class="text-2xl ">ثبت آگهی</p>
+            </div>
+        </div>
+
+        <div>
+            <a href="#" class="font-semibold text-sm text-main rounded-2xl border border-main px-6 py-2">پاک کردن فرم</a>
+        </div>
+
+    </div>
+
     <!--section input img-->
     <section class="flex flex-col items-center lg:flex-row mt-2">
-        <div class="flex-col w-full px-4 lg:w-1/2 order-1 lg:order-2 border-b border-gray-400 pb-8">
+
+
+
+        <div class="flex-col w-full px-4 lg:w-1/2 order-1 lg:order-2 ">
 
             <h2 class="text-base font-semibold mt2">انتخاب عکس</h2>
             <p class="text-sm mt2 text-gray-400">یک تصویر بهتر از هزار کلمه. با قرار دادن عکس شانس دیده شدن آگهی‌تان رو 5 برابر کنید</p>
 
             <!--input img-->
-            <div class="flex gap-x-2 mt-4 relative">
+            <div class="flex gap-x-2 mt-4 relative border-b border-gray-400  pb-8">
                 
                 <div class="flex flex-col items-center justify-center w-1/4 aspect-square border-2 border-dashed rounded-lg text-main ">
                     <svg class="size-7">
@@ -239,10 +257,76 @@
                 <input type="file" class="absolute inset-0 opacity-0">
 
             </div>
+            <h1 class="text-lg mt-4 hidden lg:inline-block">با آگهی در شیپور ، شما <a href="#" class="font-bold text-main">شرایط و قوانین</a> آن را پذیرفته اید</h1>
+            <div class="items-center justify-center text-white font-semibold bg-main rounded-2xl py-2 w-1/4  mt-2 hidden lg:flex">
+                ثبت آگهی
+            </div>
+            
 
         </div>
 
         <div class="w-full px-4 lg:w-1/2 order-2 lg:order-1">
+
+            <form action="" class="flex flex-col px-4">
+                
+                <div class="w-full border-b border-main relative float-label-input text-gray-600">
+
+                    <input class="bg-transparent focus:outline-none p-3 w-full  " placeholder="" type="text">
+                    <label class="absolute top-3 text-lg font-semibold right-0 transition duration-200 ease-in-out px-2" for="">دسته بندی</label>
+                    <svg class="rotate-180 size-5 absolute top-3 left-0">
+                        <use xlink:href="#cheveron"></use>
+                    </svg>
+                </div>
+                <p class="text-sm text-rose-600 mt-2">لطفا این قسمت را تکمیل کنید.</p>
+
+                <div class="w-full border-b border-main relative float-label-input text-gray-600">
+
+                    <input class="bg-transparent focus:outline-none p-3 w-full  " placeholder="" type="text">
+                    <label class="absolute top-3 text-lg font-semibold right-0 transition duration-200 ease-in-out px-2" for="">عنوان آگهی</label>
+                    <svg class="rotate-180 size-5 absolute top-3 left-0">
+                        <use xlink:href="#cheveron"></use>
+                    </svg>
+                </div>
+                <p class="text-sm text-rose-600 mt-2">لطفا این قسمت را تکمیل کنید.</p>
+
+                <div class="w-full border-b border-main relative float-label-input text-gray-600">
+
+                    <textarea class="bg-transparent focus:outline-none p-3 w-full resize-none" rows="1" type="text"></textarea>
+                    <label class="absolute top-3 text-lg font-semibold right-0 transition duration-200 ease-in-out px-2" for="">توضیحات</label>
+                    <svg class="rotate-180 size-5 absolute top-3 left-0">
+                        <use xlink:href="#cheveron"></use>
+                    </svg>
+                </div>
+                <p class="text-sm text-rose-600 mt-2">لطفا این قسمت را تکمیل کنید.</p>
+
+                <div class="w-full border-b border-main relative float-label-input text-gray-600">
+
+                    <input class="bg-transparent focus:outline-none p-3 w-full  " placeholder="" type="text">
+                    <label class="absolute top-3 text-lg font-semibold right-0 transition duration-200 ease-in-out px-2" for="">مکان</label>
+                    <svg class="rotate-180 size-5 absolute top-3 left-0">
+                        <use xlink:href="#cheveron"></use>
+                    </svg>
+                </div>
+                <p class="text-sm text-rose-600 mt-2">لطفا این قسمت را تکمیل کنید.</p>
+
+                <div class="mt-8">
+                    <h2 class="mb-4 text-lg font-semibold text-gray-600">نوع کاربر</h2>
+
+                    <div class="flex">
+                        <div class="rounded-lg text-neutral-400 ">
+                            <input type="radio" id="item1" class="invisible" name="userType" checked>
+                            <label for="item1" class="px-6 py-1 rounded-2xl border border-neutral-400 radio">فرد</label>
+                        </div>
+
+                        <div class="rounded-lg text-neutral-400 ">
+                            <input type="radio" id="item2" class="invisible" name="userType">
+                            <label for="item2" class="px-6 py-1 rounded-2xl border border-neutral-400 radio">شرکت / فروشگاه</label>
+                        </div>
+
+                    </div>
+
+                </div>
+            </form>
 
         </div>
     </section>
