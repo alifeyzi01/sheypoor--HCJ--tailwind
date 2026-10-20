@@ -8,7 +8,8 @@
     <link rel="stylesheet" href="styles/mine.css">
 </head>
 
-<body class="container max-w-screen-xl bg-neutral-50 font-vazir">
+<body class="container max-w-screen-xl bg-neutral-50 font-vazir" x-data="{ openModal: false }" x-bind:class="{'modal-open':openModal}" >
+
     <!--svg & symbol icon-->
     <svg class="hidden">
         <!--icon location-->
@@ -139,6 +140,16 @@
   <path stroke-linecap="round" stroke-linejoin="round" d="M16.5 12.75a4.5 4.5 0 1 1-9 0 4.5 4.5 0 0 1 9 0ZM18.75 10.5h.008v.008h-.008V10.5Z" />
         </symbol>
 
+        <!--icon close -->
+        <symbol id="colse" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+        </symbol>
+
+        <!--icon home -->
+        <symbol id="home" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+  <path stroke-linecap="round" stroke-linejoin="round" d="m2.25 12 8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25" />
+        </symbol>
+
 
 
 
@@ -148,6 +159,171 @@
 
 
     </svg>
+
+
+
+    <!--pop up categoris-->    
+    <div x-cloak x-show="openModal" class="flex items-center justify-center absolute inset-0 z-60 w-screen h-screen bg-neutral-800/60  p-5">
+        <div class="flex flex-col justify-center w-[38rem] h-[42rem] bg-white px-5 py-3 rounded-xl">
+
+            <div class="flex items-center justify-between p-4">
+                <h2 class="text-xl font-semibold">دسته بندی ها</h2>
+                <svg class="size-6" x-on:click="openModal=false">
+                    <use xlink:href="#colse"></use>
+                </svg>
+            </div>
+
+            <div class="flex flex-col mt-4 overflow-y-scroll px-2 ">
+                <div class="sticky top-0 z-10">
+                    <input class="w-full h-16 p-4 border border-gray-300 focus:outline-none focus:border-main rounded-xl placeholder:text-gray-300 bg-neutral-100" type="text" placeholder="جستوجو">
+                </div>
+
+                <ul class="mt-4 px-2">
+
+                    <li class="w-full">
+                        <a class="flex items-center justify-between border-b border-gray-300 py-6" href="#">
+                            <div class="flex items-center ">
+                                <svg class="size-6 text-neutral-600">
+                                    <use xlink:href="#home"></use>
+                                </svg>
+                                <p class="text-lg text-neutral-600">املاک</p>
+                            </div>
+
+                            <div>
+                                <svg class="size-5 rotate-180 text-neutral-600">
+                                    <use xlink:href="#cheveron"></use>
+                                </svg>
+                            </div>
+                        </a>
+                    </li>
+
+                    <li class="w-full">
+                        <a class="flex items-center justify-between border-b border-gray-300 py-6" href="#">
+                            <div class="flex items-center ">
+                                <svg class="size-6 text-neutral-600">
+                                    <use xlink:href="#home"></use>
+                                </svg>
+                                <p class="text-lg text-neutral-600">املاک</p>
+                            </div>
+
+                            <div>
+                                <svg class="size-5 rotate-180 text-neutral-600">
+                                    <use xlink:href="#cheveron"></use>
+                                </svg>
+                            </div>
+                        </a>
+                    </li>
+
+                    <li class="w-full">
+                        <a class="flex items-center justify-between border-b border-gray-300 py-6" href="#">
+                            <div class="flex items-center ">
+                                <svg class="size-6 text-neutral-600">
+                                    <use xlink:href="#home"></use>
+                                </svg>
+                                <p class="text-lg text-neutral-600">املاک</p>
+                            </div>
+
+                            <div>
+                                <svg class="size-5 rotate-180 text-neutral-600">
+                                    <use xlink:href="#cheveron"></use>
+                                </svg>
+                            </div>
+                        </a>
+                    </li>
+
+                    <li class="w-full">
+                        <a class="flex items-center justify-between border-b border-gray-300 py-6" href="#">
+                            <div class="flex items-center ">
+                                <svg class="size-6 text-neutral-600">
+                                    <use xlink:href="#home"></use>
+                                </svg>
+                                <p class="text-lg text-neutral-600">املاک</p>
+                            </div>
+
+                            <div>
+                                <svg class="size-5 rotate-180 text-neutral-600">
+                                    <use xlink:href="#cheveron"></use>
+                                </svg>
+                            </div>
+                        </a>
+                    </li>
+
+                    <li class="w-full">
+                        <a class="flex items-center justify-between border-b border-gray-300 py-6" href="#">
+                            <div class="flex items-center ">
+                                <svg class="size-6 text-neutral-600">
+                                    <use xlink:href="#home"></use>
+                                </svg>
+                                <p class="text-lg text-neutral-600">املاک</p>
+                            </div>
+
+                            <div>
+                                <svg class="size-5 rotate-180 text-neutral-600">
+                                    <use xlink:href="#cheveron"></use>
+                                </svg>
+                            </div>
+                        </a>
+                    </li>
+
+                    <li class="w-full">
+                        <a class="flex items-center justify-between border-b border-gray-300 py-6" href="#">
+                            <div class="flex items-center ">
+                                <svg class="size-6 text-neutral-600">
+                                    <use xlink:href="#home"></use>
+                                </svg>
+                                <p class="text-lg text-neutral-600">املاک</p>
+                            </div>
+
+                            <div>
+                                <svg class="size-5 rotate-180 text-neutral-600">
+                                    <use xlink:href="#cheveron"></use>
+                                </svg>
+                            </div>
+                        </a>
+                    </li>
+
+                    <li class="w-full">
+                        <a class="flex items-center justify-between border-b border-gray-300 py-6" href="#">
+                            <div class="flex items-center ">
+                                <svg class="size-6 text-neutral-600">
+                                    <use xlink:href="#home"></use>
+                                </svg>
+                                <p class="text-lg text-neutral-600">املاک</p>
+                            </div>
+
+                            <div>
+                                <svg class="size-5 rotate-180 text-neutral-600">
+                                    <use xlink:href="#cheveron"></use>
+                                </svg>
+                            </div>
+                        </a>
+                    </li>
+
+                    <li class="w-full">
+                        <a class="flex items-center justify-between border-b border-gray-300 py-6" href="#">
+                            <div class="flex items-center ">
+                                <svg class="size-6 text-neutral-600">
+                                    <use xlink:href="#home"></use>
+                                </svg>
+                                <p class="text-lg text-neutral-600">املاک</p>
+                            </div>
+
+                            <div>
+                                <svg class="size-5 rotate-180 text-neutral-600">
+                                    <use xlink:href="#cheveron"></use>
+                                </svg>
+                            </div>
+                        </a>
+                    </li>
+
+                </ul>
+                
+            </div>
+        </div>
+        
+    </div>
+
+
     <!--header-->
     <header
         class="flex items-center justify-between h-10 lg:h-16 sticky top-0 z-50 bg-neutral-50 px-2 border-b border-gray-300 py-8 lg:py-12">
@@ -269,7 +445,7 @@
 
             <form action="" class="flex flex-col px-4">
                 
-                <div class="w-full border-b border-main relative float-label-input text-gray-600">
+                <div class="w-full border-b border-main relative float-label-input text-gray-600" x-on:click="openModal=true">
 
                     <input class="bg-transparent focus:outline-none p-3 w-full  " placeholder="" type="text">
                     <label class="absolute top-3 text-lg font-semibold right-0 transition duration-200 ease-in-out px-2" for="">دسته بندی</label>
@@ -309,9 +485,9 @@
                 </div>
                 <p class="text-sm text-rose-600 mt-2">لطفا این قسمت را تکمیل کنید.</p>
 
+                <!--user type-->
                 <div class="mt-8">
                     <h2 class="mb-4 text-lg font-semibold text-gray-600">نوع کاربر</h2>
-
                     <div class="flex">
                         <div class="rounded-lg text-neutral-400 ">
                             <input type="radio" id="item1" class="invisible" name="userType" checked>
@@ -423,8 +599,8 @@
         </div>
 
         <!--bootom footer-->
-        <div class="h-8 flex items-center bg-neutral-300 w-full">
-            <div class="w-full flex items-center justify-between text-neutral-400 stroke-neutral-400 px-5">
+        <div class="h-8 flex items-center w-full">
+            <div class="w-full flex items-center justify-between text-neutral-400 stroke-neutral-400 px-5 bg-neutral-300">
                 <p class=" text-sm">طراحی شده توسط اتم‌لرن</p>
                 <div class="flex gap-10 last:p-3">
                     <svg class="size-6">
@@ -454,6 +630,7 @@
 
 
     <script src="js/script.js"></script>
+    <script defer src="js/alpine.bundle.js"></script>
 
 </body>
 

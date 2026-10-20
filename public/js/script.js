@@ -5,3 +5,9 @@ likes.forEach(like =>{
         console.log('here');
     })
 });
+
+import Alpine from 'alpinejs'
+ 
+window.Alpine = Alpine
+ 
+Alpine.start()
